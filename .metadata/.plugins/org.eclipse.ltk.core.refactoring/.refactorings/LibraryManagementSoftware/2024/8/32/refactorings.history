@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;librarymanagement.Libearian&apos; to &apos;Librarian&apos;&#x0D;&#x0A;- Original project: &apos;LibraryManagementSoftware&apos;&#x0D;&#x0A;- Original element: &apos;librarymanagement.Libearian&apos;&#x0D;&#x0A;- Renamed element: &apos;librarymanagement.Librarian&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Libearian&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;librarymanagement{Libearian.java[Libearian" matchStrategy="1" name="Librarian" qualified="false" references="true" similarDeclarations="false" stamp="1723044624902" textual="false" version="1.0"/>
+</session>

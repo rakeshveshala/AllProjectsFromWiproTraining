@@ -1,0 +1,5 @@
+package com.wipro.demo.model;
+
+public class Product {
+
+}

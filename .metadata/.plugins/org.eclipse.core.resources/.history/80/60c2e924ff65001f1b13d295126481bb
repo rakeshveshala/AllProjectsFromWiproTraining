@@ -1,0 +1,18 @@
+package com.wipro.demo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.wipro.demo.dao.PersonRepository;
+import com.wipro.demo.model.Person;
+
+public class PersonController {
+	@Autowired
+	PersonRepository personrep;
+
+	@PostMapping("/insertPerson")
+	public Person insertData(@RequestBody Person p) {
+		return personrep.save(p);
+	}
+}

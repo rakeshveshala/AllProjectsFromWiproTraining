@@ -1,0 +1,15 @@
+package com.wipro.demo.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.wipro.demo.dao.BookRepository;
+
+@RestController
+@RequestMapping("/User")
+public class UserController {
+	@Autowired
+	BookRepository brep;
+	
+}

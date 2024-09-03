@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;PersonalServlet.java&apos; to &apos;WelcomeServlet.java&apos;&#x0D;&#x0A;- Original project: &apos;LoginDemo&apos;&#x0D;&#x0A;- Destination element: &apos;WelcomeServlet.java&apos;&#x0D;&#x0A;- Original element: &apos;PersonalServlet.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move file" element1="src/main/java/mypackage/PersonalServlet.java" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1723896160403" target="/FirstWeb/src/main/java/mypackage/WelcomeServlet.java" units="0" version="1.0"/>
+</session>

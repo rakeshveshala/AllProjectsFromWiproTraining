@@ -1,0 +1,5 @@
+package com.wipro.demo.exceptions;
+
+public class EmployeeExceptionHandler {
+
+}

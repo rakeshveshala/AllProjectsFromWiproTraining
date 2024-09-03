@@ -1,0 +1,8 @@
+package com.wipro.demo.model;
+
+import jakarta.persistence.*;
+
+@Entity
+public class Employee {
+
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+<bean id="student1" class="myspring.SpringCore.Student">
+<property name="studentId" value="1"/>
+<property name="studentName" value="Rakesh"/>
+<property name="mobileNo" value="9721871671"/>
+<property name="score" value="98"/>
+</bean>
+
+<bean id="std" class="myspring.SpringCore.Student">
+<property name="studentId" value="2"/>
+<property name="studentName" value="pranay"/>
+<property name="mobileNo" value="9721878871"/>
+<property name="score" value="96"/>
+</bean>
+
+<bean id="student3" class="myspring.SpringCore.Student">
+<constructor-arg index="0" value="3"/>
+<constructor-arg index="1" value="Hanu"/>
+<constructor-arg index="2" value="918867126"/>
+<constructor-arg index="3" value="70"/>
+</bean>
+
+<!-- assigning student object to college -->
+<bean id="college1" class="myspring.SpringCore.College" autowire="byName">
+<property name="collegeCode" value="121"/>
+<property name="collegeName" value="MRCET"/>
+<property name="city" value="Hyderabad"/>
+</bean>
+
+</beans>

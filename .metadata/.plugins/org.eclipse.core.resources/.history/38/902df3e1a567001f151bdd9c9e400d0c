@@ -1,0 +1,20 @@
+package corejava.arrays;
+import java.util.Arrays;
+
+public class CheckEqualityOfArrays {
+    public static void main(String[] args) {
+        int[] array1 = {1, 2, 3, 4, 5};
+        int[] array2 = {1, 2, 3, 4, 5};
+        int[] array3 = {5, 4, 3, 2, 1};
+        
+        int[][] array4= {{1, 2, 3, 4, 5},{5, 4, 3, 2, 1}};
+        int[][] array5= {{1, 2, 3, 4, 5},{5, 4, 3, 2, 1}};
+        int[][] array6= {{11, 22, 33, 42, 5},{5, 4, 3, 2, 1}};
+
+        boolean isEqual = Arrays.equals(array1, array2);
+        System.out.println("Array1 equals Array2: " + isEqual);
+
+        isEqual = Arrays.equals(array1, array3);
+        System.out.println("Array1 equals Array3: " + isEqual);
+    }
+}

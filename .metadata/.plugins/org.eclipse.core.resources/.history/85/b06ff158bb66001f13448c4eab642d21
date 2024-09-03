@@ -1,0 +1,57 @@
+package com.wipro.demo.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.wipro.demo.dao.BookRepository;
+import com.wipro.demo.model.Book;
+//import io.swagger.v3.oas.annotations.Operation;
+
+@RestController
+@RequestMapping("/books")
+public class UserController {
+	@Autowired
+	BookRepository brep;
+
+	@GetMapping("/retreiveAll")
+	public List<Book> retreiveAllBooks() {
+		return brep.findAll();
+	}
+
+	@GetMapping("/findByAuthor/{author}")
+	public List<Book> retreiveByAuthor(@PathVariable("author") String aut) {
+		return brep.findByAuthor(aut);
+	}
+
+	@GetMapping("/findByTitle/{title}")
+	public List<Book> retreiveByTitle(@PathVariable("title") String tit) {
+		return brep.findByTitle(tit);
+	}
+
+	@GetMapping("/findByPublication/{publication}")
+	public List<Book> retreiveByPublication(@PathVariable("publication") String pub) {
+		return brep.findByPublication(pub);
+	}
+
+	@GetMapping("/findById/{id}")
+	public Optional<Book> retreiveById(@PathVariable("id") int i) {
+		return brep.findById(i);
+	}
+
+	@GetMapping("/findByPrice/{price}")
+	public Optional<Book> retreiveByPrice(@PathVariable("price") double prc) {
+		return brep.findByPrice(prc);
+	}
+
+	@GetMapping("/sortedData")
+	public List<Book> retreivePrices() {
+		return brep.findByOrderByPriceAsc();
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.wipro.demo.dao;
+
+public class MovieRepository {
+
+}

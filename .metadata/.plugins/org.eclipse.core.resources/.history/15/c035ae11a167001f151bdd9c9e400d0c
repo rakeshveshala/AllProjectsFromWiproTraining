@@ -1,0 +1,11 @@
+package corejava.arrays;
+
+public class DupElementsInArray {
+	static int[] arr2;
+	static int[] arr1= {12,22,33,32,22,12};
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

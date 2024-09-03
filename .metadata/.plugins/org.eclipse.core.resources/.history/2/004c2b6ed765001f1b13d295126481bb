@@ -1,0 +1,16 @@
+package com.wipro.demo.model;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "StudentRelation")
+public class Student {
+	@Id
+	private int studentcode;
+	private String studentname;
+	private int score;
+	@OneToOne (targetEntity=Address.class, cascade=CascadeType.ALL)
+	@JoinColumn (name="addcode")
+	private Address addobj;
+	
+}

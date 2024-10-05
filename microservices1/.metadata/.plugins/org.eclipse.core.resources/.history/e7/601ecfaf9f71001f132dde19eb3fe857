@@ -1,0 +1,122 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+    
+<%@ page import="java.util.List" %>
+<%@ page import="com.entity.Customer" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Register Customer</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #e0f7fa; /* Light cyan background */
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .form-container {
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        width: 400px;
+    }
+    h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 25px;
+        font-size: 26px;
+        font-weight: bold;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #555;
+    }
+    input[type="text"], input[type="password"], input[type="email"] {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 14px;
+        background-color: #f9f9f9;
+    }
+    input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+        border-color: #007BFF;
+        outline: none;
+        background-color: #fff;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        background-color: #28a745; /* Green button */
+        border: none;
+        border-radius: 6px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+        background-color: #218838;
+    }
+    .back-btn, .login-btn {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        border-radius: 6px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-top: 10px; /* Adds space between buttons */
+    }
+    .back-btn {
+        background-color: #dc3545; /* Red button */
+    }
+    .back-btn:hover {
+        background-color: #c82333;
+    }
+    .login-btn {
+        background-color: #007bff; /* Blue button for login */
+    }
+    .login-btn:hover {
+        background-color: #0056b3;
+    }
+    .form-container form {
+        display: flex;
+        flex-direction: column;
+    }
+</style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Register Customer</h1>
+        <form action="${pageContext.request.contextPath}/customers/register" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <input type="submit" value="Register">
+            <!-- Back button -->
+            <button type="button" class="back-btn" onclick="window.history.back();">Back</button>
+            <!-- Login button -->
+            <button type="button" class="login-btn" onclick="window.location.href='${pageContext.request.contextPath}/customers/login';">Login</button>
+        </form>
+    </div>
+</body>
+</html>

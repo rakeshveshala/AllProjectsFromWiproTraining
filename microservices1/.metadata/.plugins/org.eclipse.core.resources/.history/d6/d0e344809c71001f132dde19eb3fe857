@@ -1,0 +1,144 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="com.entity.Account" %>
+<%@ page import="com.entity.Customer" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Create Bank Account For Customer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e9f4f5;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            display: flex; /* Use flexbox to arrange child elements side by side */
+            justify-content: space-between; /* Space between containers */
+            width: 100%;
+            max-width: 1200px; /* Max width for the container */
+            padding: 20px;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            width: 45%;
+            box-sizing: border-box;
+        }
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            width: 45%;
+            box-sizing: border-box;
+        }
+        h2 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555555;
+            text-align: left;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        a {
+            display: block;
+            margin-top: 15px;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+        .links-container a {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            color: #007bff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .links-container a:hover {
+            background-color: #e9ecef;
+            border-color: #007bff;
+        }
+        .logout {
+            margin-top: 20px;
+            color: #e64a19; /* Red color */
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .logout:hover {
+            color: #c62828; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Create Bank Account</h2>
+            <form action="${pageContext.request.contextPath}/accounts/register" method="post">
+                <label for="accountNumber">Account Number:</label>
+                <input type="text" id="accountNumber" name="accountNumber" required /><br/>
+
+                <label for="balance">Balance:</label>
+                <input type="number" id="balance" name="balance" step="0.01" required /><br/>
+
+                <label for="customerId">Customer ID:</label>
+                <input type="number" id="customerId" name="customerId" required /><br/>
+
+                <input type="submit" value="Create Account" />
+            </form>
+            <a href="${pageContext.request.contextPath}/customers/register">Register Customer Details</a>
+        </div>
+        
+        <div class="links-container">
+            <h2>If Bank Account Exists</h2>
+            <a href="${pageContext.request.contextPath}/accounts/withdraw">Withdraw Amount</a>
+            <a href="${pageContext.request.contextPath}/accounts/deposit">Deposit Amount</a>
+            <a href="${pageContext.request.contextPath}/accounts/transfer">Transfer Amount</a>
+            <a href="${pageContext.request.contextPath}/admins/home" class="logout">Log Out</a>
+        </div>
+    </div>
+</body>
+</html>

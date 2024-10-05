@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;main&apos; to &apos;BookProducer/src/main/java/com.example.demo.model&apos;&#x0D;&#x0A;- Original project: &apos;BookConsumer&apos;&#x0D;&#x0A;- Destination element: &apos;BookProducer/src/main/java/com.example.demo.model&apos;&#x0D;&#x0A;- Original element: &apos;main&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move folder" destination="=BookProducer/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.demo.model" element1="src/main" files="0" flags="589830" folders="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1725449680500" units="0" version="1.0"/>
+</session>

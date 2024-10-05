@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\Vesha\Downloads\RakeshPizzaStoreSprint1 (1)"/>
+			<item value="C:\Users\Vesha\Downloads\Sprint1 G.Sai Ganesh"/>
+			<item value="C:\Users\Vesha\Downloads\CapstoneProjectLaxman (1)"/>
+			<item value="C:\Users\Vesha\Downloads\CapstoneProjectLaxmannew"/>
+			<item value="C:\Users\Vesha\Downloads\pizza_project_sumanth1"/>
+			<item value="C:\Users\Vesha\Downloads\SumanthPizzaStore (1)"/>
+			<item value="C:\Users\Vesha\Downloads\MircoService"/>
+			<item value="C:\Users\Vesha\Downloads\BookConsumer"/>
+			<item value="C:\Users\Vesha\Downloads\BookProducer"/>
+			<item value="C:\Users\Vesha\Downloads\AppServer"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

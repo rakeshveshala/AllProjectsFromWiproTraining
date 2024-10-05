@@ -1,5 +1,0 @@
-package com.wipro.demo.config;
-
-public class SecurityConfig {
-
-}

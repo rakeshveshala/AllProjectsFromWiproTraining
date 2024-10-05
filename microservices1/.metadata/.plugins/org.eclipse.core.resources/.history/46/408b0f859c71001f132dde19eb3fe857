@@ -1,0 +1,95 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.List" %>
+<%@ page import="com.entity.Customer" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+        h1 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            color: #555555;
+            margin-bottom: 15px;
+        }
+        strong {
+            color: #333333;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 15px;
+            margin-top: 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .update-profile {
+            background-color: #007bff;
+            color: #ffffff;
+        }
+        .update-profile:hover {
+            background-color: #0056b3;
+        }
+        .activate-deactivate {
+            background-color: #28a745;
+            color: #ffffff;
+        }
+        .activate-deactivate:hover {
+            background-color: #218838;
+        }
+        .login-back {
+            background-color: #6c757d;
+            color: #ffffff;
+        }
+        .login-back:hover {
+            background-color: #5a6268;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Customer Details</h1>
+        <p><strong>Username:</strong> ${customer.username}</p>
+        <p><strong>Email:</strong> ${customer.email}</p>
+        <p><strong>Status:</strong> ${customer.active ? "Active" : "Inactive"}</p>
+
+        <a class="update-profile" href="${pageContext.request.contextPath}/customers/update/${customer.id}">Update Profile</a><br><br>
+        
+        <!--  <c:choose>
+            <c:when test="${customer.active}">
+                <a class="activate-deactivate" href="${pageContext.request.contextPath}/customers/deactivate/${customer.id}">Deactivate Account</a>
+            </c:when>
+            <c:otherwise>
+                <a class="activate-deactivate" href="${pageContext.request.contextPath}/customers/activate/${customer.id}">Activate Account</a>
+            </c:otherwise>
+        </c:choose>-->
+        
+        <a class="login-back" href="${pageContext.request.contextPath}/customers/login">Back to Customer login</a>
+    </div>
+</body>
+</html>

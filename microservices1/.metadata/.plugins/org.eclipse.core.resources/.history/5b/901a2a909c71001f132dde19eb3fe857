@@ -1,0 +1,71 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.List" %>
+<%@ page import="com.entity.Customer" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 400px;
+        }
+        h1 {
+            color: #4caf50;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 16px;
+            color: #555555;
+            margin-bottom: 20px;
+        }
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+        .logout {
+            background-color: #e64a19; /* Red color */
+            margin-top: 10px;
+        }
+        .logout:hover {
+            background-color: #c62828; /* Darker red on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Successful</h1>
+        <p>Welcome, ${customer.username}!</p>
+        <p>Your email: ${customer.email}</p>
+        <a href="${pageContext.request.contextPath}/customers/${customer.id}">View your profile</a>
+        <a href="${pageContext.request.contextPath}/logout" class="logout">Log Out</a>
+    </div>
+</body>
+</html>

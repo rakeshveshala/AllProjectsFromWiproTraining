@@ -1,5 +1,0 @@
-package com.wipro.demo.entities;
-
-public class AuthRequest {
-
-}

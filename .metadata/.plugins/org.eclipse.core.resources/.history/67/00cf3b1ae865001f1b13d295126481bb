@@ -1,7 +1,0 @@
-package com.wipro.demo.model;
-
-public class Passport {
-	private int passportno;
-	private String address;
-	private String country;
-}

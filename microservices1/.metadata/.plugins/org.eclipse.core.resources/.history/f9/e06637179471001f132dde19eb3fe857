@@ -1,0 +1,27 @@
+package com.pizzastore.service;
+
+import java.util.List;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.pizzastore.model.Customer;
+import com.pizzastore.repository.CustomerRepository;
+
+
+@Service
+public class CustomerService {
+	  @Autowired
+	  CustomerRepository customerRepository;
+	 public Customer registerCustomer(Customer customer) {
+	 return customerRepository.save(customer);
+	 }
+	 public Customer findCustomerByUsername(String username) {
+	 return customerRepository.findByUsername(username);
+	 }
+	 
+	 public List<Customer>getCustomers(){
+		 return customerRepository.findAll();
+	 }
+}
